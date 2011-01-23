@@ -1,486 +1,0 @@
-TTSAVDemo
-v7
-r0
-t317432115.841536
-cCheck dependencies
-cProcessInfoPlistFile /Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/Debug-iphonesimulator/TSAVDemo.app/Info.plist TSAVDemo-Info.plist
-cCompileXIB /Users/Nick/Documents/Projects/tools/TSAlertView/Demo/MainWindow.xib
-cCpResource build/Debug-iphonesimulator/TSAVDemo.app/TSAlertViewMessageListViewShadow.png ../TSAlertView/TSAlertViewMessageListViewShadow.png
-cCpResource build/Debug-iphonesimulator/TSAVDemo.app/TSAlertViewBackground.png ../TSAlertView/TSAlertViewBackground.png
-cCpResource build/Debug-iphonesimulator/TSAVDemo.app/TSAlertViewBackground2.png ../TSAlertView/TSAlertViewBackground2.png
-cCpResource build/Debug-iphonesimulator/TSAVDemo.app/TSAlertViewButtonBackground.png ../TSAlertView/TSAlertViewButtonBackground.png
-cCpResource build/Debug-iphonesimulator/TSAVDemo.app/TSAlertViewButtonBackground_Highlighted.png ../TSAlertView/TSAlertViewButtonBackground_Highlighted.png
-cCpResource build/Debug-iphonesimulator/TSAVDemo.app/TSAlertViewCancelButtonBackground.png ../TSAlertView/TSAlertViewCancelButtonBackground.png
-cCompileXIB /Users/Nick/Documents/Projects/tools/TSAlertView/Demo/Classes/TSAVDemoViewController.xib
-cCompileXIB /Users/Nick/Documents/Projects/tools/TSAlertView/Demo/MainWindow-iPad.xib
-cProcessPCH /var/folders/P0/P0SaI0UbEgCoWvtkCh-Wdk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TSAVDemo_Prefix-hhfmmetrprwjefawmgtnmnfhqgur/TSAVDemo_Prefix.pch.gch TSAVDemo_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/TSAVDemo.build/Debug-iphonesimulator/TSAVDemo.build/Objects-normal/i386/main.o /Users/Nick/Documents/Projects/tools/TSAlertView/Demo/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/TSAVDemo.build/Debug-iphonesimulator/TSAVDemo.build/Objects-normal/i386/TSAVDemoAppDelegate.o /Users/Nick/Documents/Projects/tools/TSAlertView/Demo/Classes/TSAVDemoAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/TSAVDemo.build/Debug-iphonesimulator/TSAVDemo.build/Objects-normal/i386/TSAlertView.o /Users/Nick/Documents/Projects/tools/TSAlertView/Demo/../TSAlertView/TSAlertView.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/TSAVDemo.build/Debug-iphonesimulator/TSAVDemo.build/Objects-normal/i386/TSAVDemoViewController.o /Users/Nick/Documents/Projects/tools/TSAlertView/Demo/Classes/TSAVDemoViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cLd /Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/Debug-iphonesimulator/TSAVDemo.app/TSAVDemo normal i386
-cGenerateDSYMFile /Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/Debug-iphonesimulator/TSAVDemo.app.dSYM /Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/Debug-iphonesimulator/TSAVDemo.app/TSAVDemo
-cTouch /Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/Debug-iphonesimulator/TSAVDemo.app
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk
-c000000004CC128950000000000000110
-t1287727253
-s272
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
-c000000004CC12246000000000029B310
-t1287725638
-s2732816
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/Foundation.framework/Foundation
-c000000004CC1226D000000000029D5D0
-t1287725677
-s2741712
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
-c000000004CC1225F0000000000001466
-t1287725663
-s5222
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.h
-c000000004CC1233C00000000000000C4
-t1287725884
-s196
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
-c000000004CC1281F0000000000000AA1
-t1287727135
-s2721
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/UIKit.framework/UIKit
-c000000004CC12883000000000074D7B0
-t1287727235
-s7657392
-
-N/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/../TSAlertView/TSAlertView.m
-c000000004D39CC760000000000004F96
-t1295633526
-s20374
-i"TSAlertView.h"
-i<QuartzCore/QuartzCore.h>
-
-N/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/../TSAlertView/TSAlertViewBackground.png
-c000000004D372F170000000000000F02
-t1295462167
-s3842
-
-N/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/../TSAlertView/TSAlertViewBackground2.png
-c000000004D372F19000000000000246B
-t1295462169
-s9323
-
-N/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/../TSAlertView/TSAlertViewButtonBackground.png
-c000000004D372F1C0000000000000222
-t1295462172
-s546
-
-N/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/../TSAlertView/TSAlertViewButtonBackground_Highlighted.png
-c000000004D372F210000000000000226
-t1295462177
-s550
-
-N/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/../TSAlertView/TSAlertViewCancelButtonBackground.png
-c000000004D372F24000000000000022F
-t1295462180
-s559
-
-N/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/../TSAlertView/TSAlertViewMessageListViewShadow.png
-c000000004D372F0E0000000000000120
-t1295462158
-s288
-
-N/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/Classes/TSAVDemoAppDelegate.h
-c000000004D39AD4900000000000001C5
-t1295625545
-s453
-i<UIKit/UIKit.h>
-
-N/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/Classes/TSAVDemoAppDelegate.m
-c000000004D391D250000000000000A99
-t1295588645
-s2713
-i"TSAVDemoAppDelegate.h"
-i"TSAVDemoViewController.h"
-
-N/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/Classes/TSAVDemoViewController.h
-c000000004D39B1CD00000000000002BA
-t1295626701
-s698
-i<UIKit/UIKit.h>
-
-N/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/Classes/TSAVDemoViewController.m
-c000000004D39B2B000000000000009AA
-t1295626928
-s2474
-i"TSAVDemoViewController.h"
-i"TSAlertView.h"
-
-N/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/Classes/TSAVDemoViewController.xib
-c000000004D39B4B600000000000637E8
-t1295627446
-s407528
-
-N/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/MainWindow-iPad.xib
-c000000004D39B4710000000000007EAA
-t1295627377
-s32426
-
-N/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/MainWindow.xib
-c000000004D39AD590000000000007C85
-t1295625561
-s31877
-
-N/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/TSAVDemo_Prefix.pch
-c000000004D391D2500000000000000B9
-t1295588645
-s185
-i<Foundation/Foundation.h>
-i<UIKit/UIKit.h>
-
-N/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/TSAlertView/TSAlertView.h
-c00000000000000000000000000000000
-t2
-s0
-
-N/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/TSAlertView/TSAlertView.m
-c00000000000000000000000000000000
-t2
-s0
-
-N/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/TSAlertView/TSAlertViewBackground.png
-c00000000000000000000000000000000
-t2
-s0
-
-N/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/TSAlertView/TSAlertViewBackground2.png
-c00000000000000000000000000000000
-t2
-s0
-
-N/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/TSAlertView/TSAlertViewButtonBackground.png
-c00000000000000000000000000000000
-t2
-s0
-
-N/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/TSAlertView/TSAlertViewButtonBackground_Highlighted.png
-c00000000000000000000000000000000
-t2
-s0
-
-N/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/TSAlertView/TSAlertViewCancelButtonBackground.png
-c00000000000000000000000000000000
-t2
-s0
-
-N/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/TSAlertView/TSAlertViewMessageListViewShadow.png
-c00000000000000000000000000000000
-t2
-s0
-
-N/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/Debug-iphonesimulator/TSAVDemo.app
-t1295735870
-s476
-
-N/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/Debug-iphonesimulator/TSAVDemo.app.dSYM
-t1295735870
-s102
-
-N/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/Debug-iphonesimulator/TSAVDemo.app/Info.plist
-t1295735867
-s672
-
-N/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/Debug-iphonesimulator/TSAVDemo.app/MainWindow-iPad.nib
-t1295735868
-s1699
-
-N/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/Debug-iphonesimulator/TSAVDemo.app/MainWindow.nib
-t1295735868
-s1699
-
-N/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/Debug-iphonesimulator/TSAVDemo.app/PkgInfo
-t1295735867
-s8
-
-N/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/Debug-iphonesimulator/TSAVDemo.app/TSAVDemo
-t1295735870
-s69484
-
-N/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/Debug-iphonesimulator/TSAVDemo.app/TSAVDemoViewController.nib
-t1295735868
-s4622
-
-N/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/Debug-iphonesimulator/TSAVDemo.app/TSAlertViewBackground.png
-t1295735868
-s3842
-
-N/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/Debug-iphonesimulator/TSAVDemo.app/TSAlertViewBackground2.png
-t1295735867
-s9323
-
-N/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/Debug-iphonesimulator/TSAVDemo.app/TSAlertViewButtonBackground.png
-t1295735867
-s546
-
-N/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/Debug-iphonesimulator/TSAVDemo.app/TSAlertViewButtonBackground_Highlighted.png
-t1295735867
-s550
-
-N/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/Debug-iphonesimulator/TSAVDemo.app/TSAlertViewCancelButtonBackground.png
-t1295735867
-s559
-
-N/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/Debug-iphonesimulator/TSAVDemo.app/TSAlertViewMessageListViewShadow.png
-t1295735867
-s288
-
-N/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/TSAVDemo.build/Debug-iphonesimulator/TSAVDemo.build/Objects-normal/i386/TSAVDemo.LinkFileList
-c000000004D3B5C3B0000000000000254
-t1295735867
-s596
-
-N/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/TSAVDemo.build/Debug-iphonesimulator/TSAVDemo.build/Objects-normal/i386/TSAVDemoAppDelegate.o
-t1295735869
-s52616
-
-N/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/TSAVDemo.build/Debug-iphonesimulator/TSAVDemo.build/Objects-normal/i386/TSAVDemoViewController.o
-t1295735870
-s49324
-
-N/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/TSAVDemo.build/Debug-iphonesimulator/TSAVDemo.build/Objects-normal/i386/TSAlertView.o
-t1295735870
-s127916
-
-N/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/TSAVDemo.build/Debug-iphonesimulator/TSAVDemo.build/Objects-normal/i386/main.o
-t1295735869
-s6332
-
-N/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/main.m
-c000000004D391D250000000000000169
-t1295588645
-s361
-i<UIKit/UIKit.h>
-
-N/Users/Nick/Documents/Projects/tools/TSAlertView/TSAlertView/TSAlertView.h
-c000000004D39B1C10000000000000AD6
-t1295626689
-s2774
-i<UIKit/UIKit.h>
-
-N/var/folders/P0/P0SaI0UbEgCoWvtkCh-Wdk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TSAVDemo_Prefix-hhfmmetrprwjefawmgtnmnfhqgur/TSAVDemo_Prefix.pch.gch
-t1295735869
-s15453392
-
-NTSAVDemo-Info.plist
-c000000004D39B47000000000000003F5
-t1295627376
-s1013
-
-CCheck dependencies
-r0
-lSLF07#2@18"Check dependencies317432115#317432115#0(0"0(0#1#0"8654553472#0"0#
-
-CCompileC build/TSAVDemo.build/Debug-iphonesimulator/TSAVDemo.build/Objects-normal/i386/TSAVDemoAppDelegate.o /Users/Nick/Documents/Projects/tools/TSAlertView/Demo/Classes/TSAVDemoAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s317428669.800116
-e317428669.880025
-r1
-xCompileC
-xbuild/TSAVDemo.build/Debug-iphonesimulator/TSAVDemo.build/Objects-normal/i386/TSAVDemoAppDelegate.o
-x/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/Classes/TSAVDemoAppDelegate.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@91"Compile /Users/Nick/Documents/Projects/tools/TSAlertView/Demo/Classes/TSAVDemoAppDelegate.m317428669#317428669#0(0"0(0#0#83"/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/Classes/TSAVDemoAppDelegate.m8636241568#2137"    cd /Users/Nick/Documents/Projects/tools/TSAlertView/Demo    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/TSAVDemo.build/Debug-iphonesimulator/TSAVDemo.build/TSAVDemo-generated-files.hmap -I/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/TSAVDemo.build/Debug-iphonesimulator/TSAVDemo.build/TSAVDemo-own-target-headers.hmap -I/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/TSAVDemo.build/Debug-iphonesimulator/TSAVDemo.build/TSAVDemo-all-target-headers.hmap -iquote /Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/TSAVDemo.build/Debug-iphonesimulator/TSAVDemo.build/TSAVDemo-project-headers.hmap -F/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/Debug-iphonesimulator -I/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/Debug-iphonesimulator/include -I/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/TSAVDemo.build/Debug-iphonesimulator/TSAVDemo.build/DerivedSources/i386 -I/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/TSAVDemo.build/Debug-iphonesimulator/TSAVDemo.build/DerivedSources -include /var/folders/P0/P0SaI0UbEgCoWvtkCh-Wdk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TSAVDemo_Prefix-hhfmmetrprwjefawmgtnmnfhqgur/TSAVDemo_Prefix.pch -c /Users/Nick/Documents/Projects/tools/TSAlertView/Demo/Classes/TSAVDemoAppDelegate.m -o /Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/TSAVDemo.build/Debug-iphonesimulator/TSAVDemo.build/Objects-normal/i386/TSAVDemoAppDelegate.o0#
-
-CCompileC build/TSAVDemo.build/Debug-iphonesimulator/TSAVDemo.build/Objects-normal/i386/TSAVDemoViewController.o /Users/Nick/Documents/Projects/tools/TSAlertView/Demo/Classes/TSAVDemoViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s317428669.880122
-e317428670.087349
-r1
-xCompileC
-xbuild/TSAVDemo.build/Debug-iphonesimulator/TSAVDemo.build/Objects-normal/i386/TSAVDemoViewController.o
-x/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/Classes/TSAVDemoViewController.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@94"Compile /Users/Nick/Documents/Projects/tools/TSAlertView/Demo/Classes/TSAVDemoViewController.m317428669#317428670#0(0"0(0#0#86"/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/Classes/TSAVDemoViewController.m8660323648#2143"    cd /Users/Nick/Documents/Projects/tools/TSAlertView/Demo    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/TSAVDemo.build/Debug-iphonesimulator/TSAVDemo.build/TSAVDemo-generated-files.hmap -I/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/TSAVDemo.build/Debug-iphonesimulator/TSAVDemo.build/TSAVDemo-own-target-headers.hmap -I/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/TSAVDemo.build/Debug-iphonesimulator/TSAVDemo.build/TSAVDemo-all-target-headers.hmap -iquote /Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/TSAVDemo.build/Debug-iphonesimulator/TSAVDemo.build/TSAVDemo-project-headers.hmap -F/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/Debug-iphonesimulator -I/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/Debug-iphonesimulator/include -I/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/TSAVDemo.build/Debug-iphonesimulator/TSAVDemo.build/DerivedSources/i386 -I/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/TSAVDemo.build/Debug-iphonesimulator/TSAVDemo.build/DerivedSources -include /var/folders/P0/P0SaI0UbEgCoWvtkCh-Wdk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TSAVDemo_Prefix-hhfmmetrprwjefawmgtnmnfhqgur/TSAVDemo_Prefix.pch -c /Users/Nick/Documents/Projects/tools/TSAlertView/Demo/Classes/TSAVDemoViewController.m -o /Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/TSAVDemo.build/Debug-iphonesimulator/TSAVDemo.build/Objects-normal/i386/TSAVDemoViewController.o0#
-
-CCompileC build/TSAVDemo.build/Debug-iphonesimulator/TSAVDemo.build/Objects-normal/i386/TSAlertView.o /Users/Nick/Documents/Projects/tools/TSAlertView/Demo/../TSAlertView/TSAlertView.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s317428669.853675
-e317428670.208236
-r1
-xCompileC
-xbuild/TSAVDemo.build/Debug-iphonesimulator/TSAVDemo.build/Objects-normal/i386/TSAlertView.o
-x/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/../TSAlertView/TSAlertView.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@90"Compile /Users/Nick/Documents/Projects/tools/TSAlertView/Demo/../TSAlertView/TSAlertView.m317428669#317428670#0(0"0(0#0#82"/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/../TSAlertView/TSAlertView.m8661120768#2128"    cd /Users/Nick/Documents/Projects/tools/TSAlertView/Demo    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/TSAVDemo.build/Debug-iphonesimulator/TSAVDemo.build/TSAVDemo-generated-files.hmap -I/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/TSAVDemo.build/Debug-iphonesimulator/TSAVDemo.build/TSAVDemo-own-target-headers.hmap -I/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/TSAVDemo.build/Debug-iphonesimulator/TSAVDemo.build/TSAVDemo-all-target-headers.hmap -iquote /Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/TSAVDemo.build/Debug-iphonesimulator/TSAVDemo.build/TSAVDemo-project-headers.hmap -F/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/Debug-iphonesimulator -I/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/Debug-iphonesimulator/include -I/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/TSAVDemo.build/Debug-iphonesimulator/TSAVDemo.build/DerivedSources/i386 -I/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/TSAVDemo.build/Debug-iphonesimulator/TSAVDemo.build/DerivedSources -include /var/folders/P0/P0SaI0UbEgCoWvtkCh-Wdk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TSAVDemo_Prefix-hhfmmetrprwjefawmgtnmnfhqgur/TSAVDemo_Prefix.pch -c /Users/Nick/Documents/Projects/tools/TSAlertView/Demo/../TSAlertView/TSAlertView.m -o /Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/TSAVDemo.build/Debug-iphonesimulator/TSAVDemo.build/Objects-normal/i386/TSAlertView.o0#
-
-CCompileC build/TSAVDemo.build/Debug-iphonesimulator/TSAVDemo.build/Objects-normal/i386/TSAlertView.o /Users/Nick/Documents/Projects/tools/TSAlertView/Demo/TSAlertView/TSAlertView.m normal i386 objective-c com.apple.compilers.gcc.4_2
-r0
-
-CCompileC build/TSAVDemo.build/Debug-iphonesimulator/TSAVDemo.build/Objects-normal/i386/main.o /Users/Nick/Documents/Projects/tools/TSAlertView/Demo/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s317428669.798882
-e317428669.853571
-r1
-xCompileC
-xbuild/TSAVDemo.build/Debug-iphonesimulator/TSAVDemo.build/Objects-normal/i386/main.o
-x/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/main.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@68"Compile /Users/Nick/Documents/Projects/tools/TSAlertView/Demo/main.m317428669#317428669#0(0"0(0#0#60"/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/main.m8659215456#2099"    cd /Users/Nick/Documents/Projects/tools/TSAlertView/Demo    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/TSAVDemo.build/Debug-iphonesimulator/TSAVDemo.build/TSAVDemo-generated-files.hmap -I/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/TSAVDemo.build/Debug-iphonesimulator/TSAVDemo.build/TSAVDemo-own-target-headers.hmap -I/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/TSAVDemo.build/Debug-iphonesimulator/TSAVDemo.build/TSAVDemo-all-target-headers.hmap -iquote /Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/TSAVDemo.build/Debug-iphonesimulator/TSAVDemo.build/TSAVDemo-project-headers.hmap -F/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/Debug-iphonesimulator -I/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/Debug-iphonesimulator/include -I/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/TSAVDemo.build/Debug-iphonesimulator/TSAVDemo.build/DerivedSources/i386 -I/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/TSAVDemo.build/Debug-iphonesimulator/TSAVDemo.build/DerivedSources -include /var/folders/P0/P0SaI0UbEgCoWvtkCh-Wdk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TSAVDemo_Prefix-hhfmmetrprwjefawmgtnmnfhqgur/TSAVDemo_Prefix.pch -c /Users/Nick/Documents/Projects/tools/TSAlertView/Demo/main.m -o /Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/TSAVDemo.build/Debug-iphonesimulator/TSAVDemo.build/Objects-normal/i386/main.o0#
-
-CCompileXIB /Users/Nick/Documents/Projects/tools/TSAlertView/Demo/Classes/TSAVDemoViewController.xib
-s317428667.925694
-e317428668.531347
-r1
-xCompileXIB
-x/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/Classes/TSAVDemoViewController.xib
-lSLF07#2@45"CompileXIB Classes/TSAVDemoViewController.xib317428667#317428668#0(0"0(0#0#88"/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/Classes/TSAVDemoViewController.xib8595779744#648"    cd /Users/Nick/Documents/Projects/tools/TSAlertView/Demo    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/Debug-iphonesimulator/TSAVDemo.app/TSAVDemoViewController.nib /Users/Nick/Documents/Projects/tools/TSAlertView/Demo/Classes/TSAVDemoViewController.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk0#
-
-CCompileXIB /Users/Nick/Documents/Projects/tools/TSAlertView/Demo/MainWindow-iPad.xib
-s317428668.307649
-e317428668.698089
-r1
-xCompileXIB
-x/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/MainWindow-iPad.xib
-lSLF07#2@30"CompileXIB MainWindow-iPad.xib317428668#317428668#0(0"0(0#0#73"/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/MainWindow-iPad.xib8660563776#626"    cd /Users/Nick/Documents/Projects/tools/TSAlertView/Demo    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/Debug-iphonesimulator/TSAVDemo.app/MainWindow-iPad.nib /Users/Nick/Documents/Projects/tools/TSAlertView/Demo/MainWindow-iPad.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk0#
-
-CCompileXIB /Users/Nick/Documents/Projects/tools/TSAlertView/Demo/MainWindow.xib
-s317428667.921623
-e317428668.307572
-r1
-xCompileXIB
-x/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/MainWindow.xib
-lSLF07#2@25"CompileXIB MainWindow.xib317428667#317428668#0(0"0(0#0#68"/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/MainWindow.xib8627154496#616"    cd /Users/Nick/Documents/Projects/tools/TSAlertView/Demo    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/Debug-iphonesimulator/TSAVDemo.app/MainWindow.nib /Users/Nick/Documents/Projects/tools/TSAlertView/Demo/MainWindow.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk0#
-
-CCpResource build/Debug-iphonesimulator/TSAVDemo.app/TSAlertViewBackground.png ../TSAlertView/TSAlertViewBackground.png
-s317428667.923072
-e317428668.010164
-r1
-xCpResource
-xbuild/Debug-iphonesimulator/TSAVDemo.app/TSAlertViewBackground.png
-x../TSAlertView/TSAlertViewBackground.png
-lSLF07#2@45"Copy ../TSAlertView/TSAlertViewBackground.png317428667#317428668#0(0"0(0#0#94"/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/../TSAlertView/TSAlertViewBackground.png8653374592#544"    cd /Users/Nick/Documents/Projects/tools/TSAlertView/Demo    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/Nick/Documents/Projects/tools/TSAlertView/Demo/../TSAlertView/TSAlertViewBackground.png /Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/Debug-iphonesimulator/TSAVDemo.app0#
-
-CCpResource build/Debug-iphonesimulator/TSAVDemo.app/TSAlertViewBackground.png TSAlertView/TSAlertViewBackground.png
-r0
-
-CCpResource build/Debug-iphonesimulator/TSAVDemo.app/TSAlertViewBackground2.png ../TSAlertView/TSAlertViewBackground2.png
-s317428667.923607
-e317428667.976448
-r1
-xCpResource
-xbuild/Debug-iphonesimulator/TSAVDemo.app/TSAlertViewBackground2.png
-x../TSAlertView/TSAlertViewBackground2.png
-lSLF07#2@46"Copy ../TSAlertView/TSAlertViewBackground2.png317428667#317428667#0(0"0(0#0#95"/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/../TSAlertView/TSAlertViewBackground2.png8668067136#545"    cd /Users/Nick/Documents/Projects/tools/TSAlertView/Demo    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/Nick/Documents/Projects/tools/TSAlertView/Demo/../TSAlertView/TSAlertViewBackground2.png /Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/Debug-iphonesimulator/TSAVDemo.app0#
-
-CCpResource build/Debug-iphonesimulator/TSAVDemo.app/TSAlertViewBackground2.png TSAlertView/TSAlertViewBackground2.png
-r0
-
-CCpResource build/Debug-iphonesimulator/TSAVDemo.app/TSAlertViewButtonBackground.png ../TSAlertView/TSAlertViewButtonBackground.png
-s317428667.924131
-e317428667.964301
-r1
-xCpResource
-xbuild/Debug-iphonesimulator/TSAVDemo.app/TSAlertViewButtonBackground.png
-x../TSAlertView/TSAlertViewButtonBackground.png
-lSLF07#2@51"Copy ../TSAlertView/TSAlertViewButtonBackground.png317428667#317428667#0(0"0(0#0#100"/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/../TSAlertView/TSAlertViewButtonBackground.png8661587104#550"    cd /Users/Nick/Documents/Projects/tools/TSAlertView/Demo    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/Nick/Documents/Projects/tools/TSAlertView/Demo/../TSAlertView/TSAlertViewButtonBackground.png /Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/Debug-iphonesimulator/TSAVDemo.app0#
-
-CCpResource build/Debug-iphonesimulator/TSAVDemo.app/TSAlertViewButtonBackground.png TSAlertView/TSAlertViewButtonBackground.png
-r0
-
-CCpResource build/Debug-iphonesimulator/TSAVDemo.app/TSAlertViewButtonBackground_Highlighted.png ../TSAlertView/TSAlertViewButtonBackground_Highlighted.png
-s317428667.924646
-e317428667.961667
-r1
-xCpResource
-xbuild/Debug-iphonesimulator/TSAVDemo.app/TSAlertViewButtonBackground_Highlighted.png
-x../TSAlertView/TSAlertViewButtonBackground_Highlighted.png
-lSLF07#2@63"Copy ../TSAlertView/TSAlertViewButtonBackground_Highlighted.png317428667#317428667#0(0"0(0#0#112"/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/../TSAlertView/TSAlertViewButtonBackground_Highlighted.png8659389984#562"    cd /Users/Nick/Documents/Projects/tools/TSAlertView/Demo    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/Nick/Documents/Projects/tools/TSAlertView/Demo/../TSAlertView/TSAlertViewButtonBackground_Highlighted.png /Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/Debug-iphonesimulator/TSAVDemo.app0#
-
-CCpResource build/Debug-iphonesimulator/TSAVDemo.app/TSAlertViewButtonBackground_Highlighted.png TSAlertView/TSAlertViewButtonBackground_Highlighted.png
-r0
-
-CCpResource build/Debug-iphonesimulator/TSAVDemo.app/TSAlertViewCancelButtonBackground.png ../TSAlertView/TSAlertViewCancelButtonBackground.png
-s317428667.925171
-e317428667.983099
-r1
-xCpResource
-xbuild/Debug-iphonesimulator/TSAVDemo.app/TSAlertViewCancelButtonBackground.png
-x../TSAlertView/TSAlertViewCancelButtonBackground.png
-lSLF07#2@57"Copy ../TSAlertView/TSAlertViewCancelButtonBackground.png317428667#317428667#0(0"0(0#0#106"/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/../TSAlertView/TSAlertViewCancelButtonBackground.png8650947648#556"    cd /Users/Nick/Documents/Projects/tools/TSAlertView/Demo    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/Nick/Documents/Projects/tools/TSAlertView/Demo/../TSAlertView/TSAlertViewCancelButtonBackground.png /Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/Debug-iphonesimulator/TSAVDemo.app0#
-
-CCpResource build/Debug-iphonesimulator/TSAVDemo.app/TSAlertViewCancelButtonBackground.png TSAlertView/TSAlertViewCancelButtonBackground.png
-r0
-
-CCpResource build/Debug-iphonesimulator/TSAVDemo.app/TSAlertViewMessageListViewShadow.png ../TSAlertView/TSAlertViewMessageListViewShadow.png
-s317428667.922298
-e317428667.990799
-r1
-xCpResource
-xbuild/Debug-iphonesimulator/TSAVDemo.app/TSAlertViewMessageListViewShadow.png
-x../TSAlertView/TSAlertViewMessageListViewShadow.png
-lSLF07#2@56"Copy ../TSAlertView/TSAlertViewMessageListViewShadow.png317428667#317428667#0(0"0(0#0#105"/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/../TSAlertView/TSAlertViewMessageListViewShadow.png8625341664#555"    cd /Users/Nick/Documents/Projects/tools/TSAlertView/Demo    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/Nick/Documents/Projects/tools/TSAlertView/Demo/../TSAlertView/TSAlertViewMessageListViewShadow.png /Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/Debug-iphonesimulator/TSAVDemo.app0#
-
-CCpResource build/Debug-iphonesimulator/TSAVDemo.app/TSAlertViewMessageListViewShadow.png TSAlertView/TSAlertViewMessageListViewShadow.png
-r0
-
-CGenerateDSYMFile /Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/Debug-iphonesimulator/TSAVDemo.app.dSYM /Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/Debug-iphonesimulator/TSAVDemo.app/TSAVDemo
-s317428670.288833
-e317428670.307217
-r1
-xGenerateDSYMFile
-x/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/Debug-iphonesimulator/TSAVDemo.app.dSYM
-x/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/Debug-iphonesimulator/TSAVDemo.app/TSAVDemo
-lSLF07#2@112"GenerateDSYMFile build/Debug-iphonesimulator/TSAVDemo.app.dSYM build/Debug-iphonesimulator/TSAVDemo.app/TSAVDemo317428670#317428670#0(0"0(0#0#103"/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/Debug-iphonesimulator/TSAVDemo.app/TSAVDemo8660736864#431"    cd /Users/Nick/Documents/Projects/tools/TSAlertView/Demo    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/Debug-iphonesimulator/TSAVDemo.app/TSAVDemo -o /Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/Debug-iphonesimulator/TSAVDemo.app.dSYM0#
-
-CLd /Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/Debug-iphonesimulator/TSAVDemo.app/TSAVDemo normal i386
-s317428670.208364
-e317428670.288710
-r1
-xLd
-x/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/Debug-iphonesimulator/TSAVDemo.app/TSAVDemo
-xnormal
-xi386
-lSLF07#2@108"Link /Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/Debug-iphonesimulator/TSAVDemo.app/TSAVDemo317428670#317428670#0(0"0(0#0#0"8653039296#980"    cd /Users/Nick/Documents/Projects/tools/TSAlertView/Demo    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -L/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/Debug-iphonesimulator -F/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/Debug-iphonesimulator -filelist /Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/TSAVDemo.build/Debug-iphonesimulator/TSAVDemo.build/Objects-normal/i386/TSAVDemo.LinkFileList -mmacosx-version-min=10.6 -Xlinker -objc_abi_version -Xlinker 2 -framework Foundation -framework UIKit -framework CoreGraphics -o /Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/Debug-iphonesimulator/TSAVDemo.app/TSAVDemo0#
-
-CProcessInfoPlistFile /Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/Debug-iphonesimulator/TSAVDemo.app/Info.plist TSAVDemo-Info.plist
-s317428667.915121
-e317428667.921555
-r1
-xProcessInfoPlistFile
-x/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/Debug-iphonesimulator/TSAVDemo.app/Info.plist
-xTSAVDemo-Info.plist
-lSLF07#2@27"Process TSAVDemo-Info.plist317428667#317428667#0(0"0(0#0#73"/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/TSAVDemo-Info.plist19140667787771988#527"    cd /Users/Nick/Documents/Projects/tools/TSAlertView/Demo    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility TSAVDemo-Info.plist -genpkginfo /Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/Debug-iphonesimulator/TSAVDemo.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/Debug-iphonesimulator/TSAVDemo.app/Info.plist0#
-
-CProcessPCH /var/folders/P0/P0SaI0UbEgCoWvtkCh-Wdk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TSAVDemo_Prefix-hhfmmetrprwjefawmgtnmnfhqgur/TSAVDemo_Prefix.pch.gch TSAVDemo_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
-s317428668.698304
-e317428669.798655
-r1
-xProcessPCH
-x/var/folders/P0/P0SaI0UbEgCoWvtkCh-Wdk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TSAVDemo_Prefix-hhfmmetrprwjefawmgtnmnfhqgur/TSAVDemo_Prefix.pch.gch
-xTSAVDemo_Prefix.pch
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@30"Precompile TSAVDemo_Prefix.pch317428668#317428669#0(0"0(0#0#73"/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/TSAVDemo_Prefix.pch8659814752#1975"    cd /Users/Nick/Documents/Projects/tools/TSAlertView/Demo    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/TSAVDemo.build/Debug-iphonesimulator/TSAVDemo.build/TSAVDemo-generated-files.hmap -I/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/TSAVDemo.build/Debug-iphonesimulator/TSAVDemo.build/TSAVDemo-own-target-headers.hmap -I/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/TSAVDemo.build/Debug-iphonesimulator/TSAVDemo.build/TSAVDemo-all-target-headers.hmap -iquote /Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/TSAVDemo.build/Debug-iphonesimulator/TSAVDemo.build/TSAVDemo-project-headers.hmap -F/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/Debug-iphonesimulator -I/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/Debug-iphonesimulator/include -I/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/TSAVDemo.build/Debug-iphonesimulator/TSAVDemo.build/DerivedSources/i386 -I/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/TSAVDemo.build/Debug-iphonesimulator/TSAVDemo.build/DerivedSources -c /Users/Nick/Documents/Projects/tools/TSAlertView/Demo/TSAVDemo_Prefix.pch -o /var/folders/P0/P0SaI0UbEgCoWvtkCh-Wdk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/TSAVDemo_Prefix-hhfmmetrprwjefawmgtnmnfhqgur/TSAVDemo_Prefix.pch.gch0#
-
-CTouch /Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/Debug-iphonesimulator/TSAVDemo.app
-s317428670.307294
-e317428670.309890
-r1
-xTouch
-x/Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/Debug-iphonesimulator/TSAVDemo.app
-lSLF07#2@100"Touch /Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/Debug-iphonesimulator/TSAVDemo.app317428670#317428670#0(0"0(0#0#0"8660285952#309"    cd /Users/Nick/Documents/Projects/tools/TSAlertView/Demo    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/Nick/Documents/Projects/tools/TSAlertView/Demo/build/Debug-iphonesimulator/TSAVDemo.app0#
-
