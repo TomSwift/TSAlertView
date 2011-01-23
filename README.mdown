@@ -18,7 +18,7 @@ TSAlertView is a drop-in replacement for UIAlertView in iOS, offering additional
 Adding TSAlertView to your project
 ====================================
 
-The simplest way to add the MBProgressHUD to your project is to directly add the `MBProgressHUD.h` and `MBProgressHUD.m` source files to your project.
+The simplest way to add the TSAlertView to your project is to directly add the `TSAlertView` folder with source filees and resources to your project.
 
 1. Download the latest code version from the repository (you can simply use the Download Source button and get the zip or tar archive of the master branch).
 2. Extract the archive.
