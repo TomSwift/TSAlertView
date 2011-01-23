@@ -48,4 +48,4 @@ Change-log
 Thanks
 ======
 
-* Matej Bukovinski:  I used your MBProgressHUD project as a template here.  Thanks!
+* Matej Bukovinski, Matt Gemmell:  I used your MBProgressHUD and MGSplitViewController projects as best-practice examples and templates for how to publish TSAlertView on github.  Thanks!

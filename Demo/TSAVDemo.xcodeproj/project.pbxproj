@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		013DD51B12ECF0D300B34A41 /* Source Code License.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 013DD51A12ECF0D300B34A41 /* Source Code License.rtf */; };
 		01A538A012E954E400B0F4A4 /* TSAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A5389912E954E400B0F4A4 /* TSAlertView.m */; };
 		01A538A112E954E400B0F4A4 /* TSAlertViewMessageListViewShadow.png in Resources */ = {isa = PBXBuildFile; fileRef = 01A5389A12E954E400B0F4A4 /* TSAlertViewMessageListViewShadow.png */; };
 		01A538A212E954E400B0F4A4 /* TSAlertViewBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 01A5389B12E954E400B0F4A4 /* TSAlertViewBackground.png */; };
@@ -27,6 +28,7 @@
 
 /* Begin PBXFileReference section */
 		0110735812EBA60D00BAC93C /* README.mdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.mdown; path = ../README.mdown; sourceTree = SOURCE_ROOT; };
+		013DD51A12ECF0D300B34A41 /* Source Code License.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = "Source Code License.rtf"; path = "../Source Code License.rtf"; sourceTree = "<group>"; };
 		01A5389812E954E400B0F4A4 /* TSAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSAlertView.h; sourceTree = "<group>"; };
 		01A5389912E954E400B0F4A4 /* TSAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSAlertView.m; sourceTree = "<group>"; };
 		01A5389A12E954E400B0F4A4 /* TSAlertViewMessageListViewShadow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TSAlertViewMessageListViewShadow.png; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				013DD51A12ECF0D300B34A41 /* Source Code License.rtf */,
 				0110735812EBA60D00BAC93C /* README.mdown */,
 				01A5399912E9F4A600B0F4A4 /* TSAVDemoViewController.h */,
 				01A5399A12E9F4A600B0F4A4 /* TSAVDemoViewController.m */,
@@ -194,6 +197,7 @@
 				01A538A612E954E400B0F4A4 /* TSAlertViewCancelButtonBackground.png in Resources */,
 				01A5399D12E9F4A600B0F4A4 /* TSAVDemoViewController.xib in Resources */,
 				01A5399F12E9F4B500B0F4A4 /* MainWindow-iPad.xib in Resources */,
+				013DD51B12ECF0D300B34A41 /* Source Code License.rtf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
