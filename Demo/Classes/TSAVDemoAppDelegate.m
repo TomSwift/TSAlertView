@@ -2,8 +2,7 @@
 //  TSAVDemoAppDelegate.m
 //  TSAVDemo
 //
-//  Created by Nick Hodapp on 1/20/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Created by Nick Hodapp aka Tom Swift on 1/19/11.
 //
 
 #import "TSAVDemoAppDelegate.h"

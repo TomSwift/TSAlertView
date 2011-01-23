@@ -2,8 +2,7 @@
 //  TSAVDemoViewController.m
 //  TSAVDemo
 //
-//  Created by Nick Hodapp on 1/21/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Created by Nick Hodapp aka Tom Swift on 1/19/11.
 //
 
 #import "TSAVDemoViewController.h"

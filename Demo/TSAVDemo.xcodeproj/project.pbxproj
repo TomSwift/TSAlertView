@@ -68,7 +68,6 @@
 		01A5389712E954E400B0F4A4 /* TSAlertView */ = {
 			isa = PBXGroup;
 			children = (
-				0110735812EBA60D00BAC93C /* README.mdown */,
 				01A5389812E954E400B0F4A4 /* TSAlertView.h */,
 				01A5389912E954E400B0F4A4 /* TSAlertView.m */,
 				01A5389A12E954E400B0F4A4 /* TSAlertViewMessageListViewShadow.png */,
@@ -93,6 +92,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				0110735812EBA60D00BAC93C /* README.mdown */,
 				01A5399912E9F4A600B0F4A4 /* TSAVDemoViewController.h */,
 				01A5399A12E9F4A600B0F4A4 /* TSAVDemoViewController.m */,
 				01A5399B12E9F4A600B0F4A4 /* TSAVDemoViewController.xib */,

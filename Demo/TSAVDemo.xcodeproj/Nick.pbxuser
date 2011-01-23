@@ -2,8 +2,8 @@
 {
 	0110735812EBA60D00BAC93C /* README.mdown */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {2091, 717}}";
-			sepNavSelRange = "{3043, 0}";
+			sepNavIntBoundsRect = "{{0, 0}, {2091, 738}}";
+			sepNavSelRange = "{3058, 0}";
 			sepNavVisRange = "{0, 3058}";
 		};
 	};
@@ -82,9 +82,9 @@
 	};
 	01A5389812E954E400B0F4A4 /* TSAlertView.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1335, 1040}}";
-			sepNavSelRange = "{1361, 0}";
-			sepNavVisRange = "{341, 2409}";
+			sepNavIntBoundsRect = "{{0, 0}, {937, 1092}}";
+			sepNavSelRange = "{25, 0}";
+			sepNavVisRange = "{0, 1747}";
 		};
 	};
 	01A5389912E954E400B0F4A4 /* TSAlertView.m */ = {
