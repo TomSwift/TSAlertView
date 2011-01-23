@@ -25,7 +25,7 @@ The simplest way to add the TSAlertView to your project is to directly add the `
 3. Open your project in Xcode, than drag and drop the `TSAlertView` folder, with all of its contents, to your classes group (in the Groups & Files view). 
 4. Make sure to select Copy items when asked. 
 
-If you have a git tracked project, you can add MBProgressHUD as a submodule to your project. 
+If you have a git tracked project, you can add TSAlertView as a submodule to your project. 
 
 1. Move inside your git tracked project.
 2. Add TSAlertView as a submodule using `git submodule add git://github.com/TomSwift/TSAlertView.git TSAlertView` .
