@@ -37,6 +37,13 @@ Usage
 
 A demo project is included in the Demo directory. This should give you an idea how to use the class. 
 
+Donate
+======
+
+Please consider donating if you use TSAlertView in your projects.  
+
+<a href="https://www.wepay.com/donate/130885"  target="_blank" ><img src="https://www.wepay.com/img/widgets/donate_with_wepay.png" alt="Donate with WePay" height="40" width="200" /></a>
+
 Change-log
 ==========
 
