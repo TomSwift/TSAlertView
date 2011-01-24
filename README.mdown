@@ -40,7 +40,7 @@ A demo project is included in the Demo directory. This should give you an idea h
 Donate
 ======
 
-Please consider donating if you use TSAlertView in your projects.  
+Please consider a small donation if you use TSAlertView in your projects.  It'll make me feel good.
 
 <a href="https://www.wepay.com/donate/130885"  target="_blank" ><img src="https://www.wepay.com/img/widgets/donate_with_wepay.png" alt="Donate with WePay" height="40" width="200" /></a>
 
