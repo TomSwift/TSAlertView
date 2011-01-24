@@ -11,6 +11,8 @@ TSAlertView is a drop-in replacement for UIAlertView in iOS, offering additional
 * "backgroundImage" property.  Can be set to a custom background image.  You should set this to a UIImage which you created with stretchableImageWithLeftCapWidth:topCapHeight:
 * "inputTextField" property.  Use to access the input value before the alert view is shown.  Could also set the font or text alignment prior to showing the alert view.
 
+TSAlertView is NOT derived from UIAlertView.  It is a clean implementation based on UIView.
+
 [![](http://dl.dropbox.com/u/47535/TSAlertView/1-thumb.png)](http://dl.dropbox.com/u/47535/TSAlertView/1.png)
 [![](http://dl.dropbox.com/u/47535/TSAlertView/2-thumb.png)](http://dl.dropbox.com/u/47535/TSAlertView/2.png)
 [![](http://dl.dropbox.com/u/47535/TSAlertView/3-thumb.png)](http://dl.dropbox.com/u/47535/TSAlertView/3.png)
@@ -44,10 +46,20 @@ Please consider a small donation if you use TSAlertView in your projects.  It'll
 
 <a href="https://www.wepay.com/donate/130885"  target="_blank" ><img src="https://www.wepay.com/img/widgets/donate_with_wepay.png" alt="Donate with WePay" height="40" width="200" /></a>
 
+License and Warranty
+====================
+
+The license for the code is included with the project; it's basically a BSD license with attribution.
+
+You're welcome to use it in commercial, closed-source, open source, free or any other kind of software, as long as you credit me appropriately.
+
+The TSAlertView code comes with no warranty of any kind. I hope it'll be useful to you (it certainly is to me), but I make no guarantees regarding its functionality or otherwise.
+
+
 Change-log
 ==========
 
-**Version 0.1** @ 2.4.09
+**Version 0.1** @ 01.23.11
 
 - Initial release.  Probably has a lot of bugs.  The demo project isn't very good.
 
