@@ -19,6 +19,7 @@
 - (void) makeKeyAndVisible
 {
 	self.oldKeyWindow = [[UIApplication sharedApplication] keyWindow];
+	self.windowLevel = UIWindowLevelAlert;
 	[super makeKeyAndVisible];
 }
 
