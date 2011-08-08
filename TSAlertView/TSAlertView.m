@@ -98,6 +98,12 @@
 - (void)TSAlertView_commonInit;
 - (void)releaseWindow:(int)buttonIndex;
 - (void)pulse;
+- (void)pulseDidStop1:(NSString *)animationID
+            finished:(NSNumber *)finished
+             context:(void *)context;
+- (void)pulseDidStop2:(NSString *)animationID
+            finished:(NSNumber *)finished
+             context:(void *)context;
 - (CGSize)titleLabelSize;
 - (CGSize)messageLabelSize;
 - (CGSize)inputTextFieldSize;
@@ -139,14 +145,13 @@
         return;
     // resize the alertview if it wants to make use of any extra space
     // (or needs to contract)
-    [UIView animateWithDuration:duration 
-             animations:^{
-                 [av sizeToFit];
-                 av.center = CGPointMake(
-                    CGRectGetMidX(self.view.bounds),
-                    CGRectGetMidY(self.view.bounds));
-                 av.frame = CGRectIntegral(av.frame);
-             }];
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationDuration:duration];
+     [av sizeToFit];
+     av.center = CGPointMake(CGRectGetMidX(self.view.bounds),
+            CGRectGetMidY(self.view.bounds));
+     av.frame = CGRectIntegral(av.frame);
+    [UIView commitAnimations];
 }
 @end
 
@@ -331,23 +336,23 @@ const CGFloat kTSAlertView_ColumnMargin = 10.;
             [self layoutSubviews];
         }
         c.y = kbframe.origin.y / 2.;
-        [UIView animateWithDuration:.2 
-                animations:^{
-                    [self setCenter:c];
-                    [self setFrame:CGRectIntegral(self.frame)];
-                }];
+        [UIView beginAnimations:nil context:NULL];
+        [UIView setAnimationDuration:.2];
+        [self setCenter:c];
+        [self setFrame:CGRectIntegral(self.frame)];
+        [UIView commitAnimations];
     }
 }
 
 - (void)onKeyboardWillHide:(NSNotification *)note
 {
-    [UIView animateWithDuration:.2 
-            animations:^{
-                CGRect bounds = [[self superview] bounds];
-                [self setCenter:CGPointMake(CGRectGetMidX(bounds),
-                        CGRectGetMidY(bounds))];
-                [self setFrame:CGRectIntegral([self frame])];
-            }];
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationDuration:.2];
+    CGRect bounds = [[self superview] bounds];
+
+    [self setCenter:CGPointMake(CGRectGetMidX(bounds), CGRectGetMidY(bounds))];
+    [self setFrame:CGRectIntegral([self frame])];
+    [UIView commitAnimations];
 }
 
 - (NSMutableArray *)buttons
@@ -546,15 +551,12 @@ const CGFloat kTSAlertView_ColumnMargin = 10.;
     if (animated) {
         [[self window] setBackgroundColor:[UIColor clearColor]];
         [[self window] setAlpha:1.];
-        [UIView animateWithDuration:.2 
-                 animations:^{
-                     [[self window] resignKeyWindow];
-                     [[self window] setAlpha:.0];
-                 }
-                 completion:^(BOOL finished) {
-                     [self releaseWindow: buttonIndex];
-                 }];
-            [UIView commitAnimations];
+        [UIView beginAnimations:nil context:NULL];
+        [UIView setAnimationDuration:.2];
+        [[self window] resignKeyWindow];
+        [[self window] setAlpha:.0];
+        [self releaseWindow:buttonIndex];
+        [UIView commitAnimations];
     } else {
         [[self window] resignKeyWindow];
         [self releaseWindow:buttonIndex];
@@ -593,9 +595,10 @@ const CGFloat kTSAlertView_ColumnMargin = 10.;
     [ow setRootController:avc];
     [ow makeKeyAndVisible];
     // fade in the window
-    [UIView animateWithDuration:.2 animations:^{
-           [ow setAlpha:1.];
-    }];
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationDuration:.2];
+    [ow setAlpha:1.];
+    [UIView commitAnimations];
     // add and pulse the alertview
     // add the alertview
     [[avc view] addSubview:self];
@@ -616,22 +619,36 @@ const CGFloat kTSAlertView_ColumnMargin = 10.;
 - (void)pulse
 {
     [self setTransform:CGAffineTransformMakeScale(.6, .6)];
-    [UIView animateWithDuration:.2 
-            animations:^{
-                [self setTransform:CGAffineTransformMakeScale(1.1, 1.1)];
-            }
-            completion:^(BOOL finished) {
-                [UIView animateWithDuration:1. / 15.
-                    animations:^{
-                        [self setTransform:CGAffineTransformMakeScale(.9, .9)];
-                    }
-                    completion:^(BOOL finished){
-                        [UIView animateWithDuration:1. / 7.5
-                            animations:^{
-                                [self setTransform:CGAffineTransformIdentity];
-                            }];
-                    }];
-            }];
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationDuration:.2];
+    [UIView setAnimationDelegate:self];
+    [UIView setAnimationDidStopSelector:
+            @selector(pulseDidStop1:finished:context:)];
+    [self setTransform:CGAffineTransformMakeScale(1.1, 1.1)];
+    [UIView commitAnimations];
+}
+
+- (void)pulseDidStop1:(NSString *)animationID
+            finished:(NSNumber *)finished
+             context:(void *)context
+{
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationDuration:1. / 15.];
+    [UIView setAnimationDelegate:self];
+    [UIView setAnimationDidStopSelector:
+            @selector(pulseDidStop2:finished:context:)];
+    [self setTransform:CGAffineTransformMakeScale(.9, .9)];
+    [UIView commitAnimations];
+}
+
+- (void)pulseDidStop2:(NSString *)animationID
+            finished:(NSNumber *)finished
+             context:(void *)context
+{
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationDuration:1. / 7.5];
+    [self setTransform:CGAffineTransformIdentity];
+    [UIView commitAnimations];
 }
 
 - (void)onButtonPress:(id)sender
