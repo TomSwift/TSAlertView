@@ -15,7 +15,7 @@
     UIViewController *_rootController;
 }
 @property (nonatomic, retain) UIWindow *oldKeyWindow;
-@property (nonatomic, assign) UIViewController *rootController;
+@property (nonatomic, retain) UIViewController *rootController;
 @end
 
 @implementation  TSAlertOverlayWindow
@@ -83,7 +83,8 @@
 {
     if (_rootController != controller) {
         [[_rootController view] removeFromSuperview];
-        _rootController = controller;
+        [_rootController autorelease];
+        _rootController = [controller retain];
         [self addSubview:[controller view]];
     }
 }
