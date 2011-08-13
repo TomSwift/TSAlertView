@@ -165,7 +165,7 @@
 @synthesize firstOtherButtonIndex = _firstOtherButtonIndex;
 @synthesize width = _width;
 @synthesize maxHeight = _maxHeight;
-@synthesize usesMessageTextView;
+@synthesize usesMessageTextView = _usesMessageTextView;
 @synthesize style = _style;
 
 const CGFloat kTSAlertView_LeftMargin = 10.;

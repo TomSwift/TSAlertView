@@ -64,6 +64,7 @@ didDismissWithButtonIndex:(NSInteger)buttonIndex;
     NSInteger _firstOtherButtonIndex;
     CGFloat _width;
     CGFloat _maxHeight;
+    BOOL _usesMessageTextView;
     TSAlertViewStyle _style;
 }
 @property(nonatomic, copy) NSString *title;
