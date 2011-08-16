@@ -67,9 +67,8 @@ didDismissWithButtonIndex:(NSInteger)buttonIndex;
     TSAlertViewStyle _style;
     // TSAlertView (TSCustomizableAlertView)
     NSMutableArray *_textFields;
-    BOOL overrodeHeight;
-    CGFloat textFieldHeightoffset;
 }
+
 @property(nonatomic, copy) NSString *title;
 @property(nonatomic, copy) NSString *message;
 @property(nonatomic, assign) id<TSAlertViewDelegate> delegate;

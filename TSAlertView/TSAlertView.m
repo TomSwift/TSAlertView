@@ -184,6 +184,7 @@ const CGFloat kTSAlertView_ColumnMargin = 10.;
 - (void)onKeyboardWillShow:(NSNotification *)note;
 - (void)onKeyboardWillHide:(NSNotification *)note;
 - (void)onButtonPress:(id)sender;
+- (void)setTextFieldProperties:(UITextField **)textField;
 @end
 
 @implementation TSAlertView
@@ -612,6 +613,12 @@ const CGFloat kTSAlertView_ColumnMargin = 10.;
     [self dismissWithClickedButtonIndex:buttonIndex animated:YES];
 }
 
+- (void)setTextFieldProperties:(UITextField **)textField
+{
+    [*textField setKeyboardAppearance:UIKeyboardAppearanceAlert];
+    [*textField setBorderStyle:UITextBorderStyleRoundedRect];
+}
+
 #pragma mark TSAlertView (Public)
 
 - (id)initWithTitle:(NSString *)title
@@ -698,9 +705,9 @@ const CGFloat kTSAlertView_ColumnMargin = 10.;
 - (UITextField *)inputTextField
 {
     if (_textFields == nil) {
-        UITextField *inputTextField = [[UITextField alloc] init];
+        UITextField *inputTextField = [[[UITextField alloc] init] autorelease];
 
-        [inputTextField setBorderStyle:UITextBorderStyleRoundedRect];
+        [self setTextFieldProperties:&inputTextField];
         _textFields =
                 [[NSMutableArray alloc] initWithObjects:inputTextField, nil];
     }
@@ -834,6 +841,9 @@ const CGFloat kTSAlertView_ColumnMargin = 10.;
         [[self window] resignKeyWindow];
         [self releaseWindow:buttonIndex];
     }
+    // Force keyboard dismissal
+    [[self textFields] makeObjectsPerformSelector:
+            @selector(resignFirstResponder)];
 }
 
 - (void)show
@@ -874,5 +884,53 @@ const CGFloat kTSAlertView_ColumnMargin = 10.;
         [self layoutSubviews];
         [[self inputTextField] becomeFirstResponder];
     }
+}
+@end
+
+@implementation TSAlertView (TSCustomizableAlertView)
+
+#pragma mark -
+#pragma mark TSAlertView (TSCustomizableAlertView)
+
+- (NSInteger)numberOfTextFields
+{
+    return [[self textFields] count];
+}
+
+- (UITextField *)firstTextField
+{
+    if ([self numberOfTextFields] > 0) {
+        return [self textFieldAtIndex:0];
+    } else {
+        return nil;
+    }
+}
+
+- (void)addTextField:(UITextField *)textField
+{
+    //[textField setBackgroundColor:[UIColor clearColor]];
+    [self setTextFieldProperties:&textField];
+    [[self textFields] addObject:textField];
+}
+
+- (UITextField *)addTextFieldWithLabel:(NSString *)label
+{
+    return [self addTextFieldWithLabel:label value:nil];
+}
+
+- (UITextField *)addTextFieldWithLabel:(NSString *)label value:(NSString *)value
+{
+    UITextField *textField =
+            [[[UITextField alloc] initWithFrame:CGRectZero] autorelease];
+
+    [textField setPlaceholder:label];
+    [textField setText:value];
+    [self addTextField:textField];
+    return textField;
+}
+
+- (UITextField *)textFieldAtIndex:(NSInteger)index
+{
+    return [[self textFields] objectAtIndex:index];
 }
 @end
