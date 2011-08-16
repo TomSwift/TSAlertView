@@ -57,7 +57,6 @@ didDismissWithButtonIndex:(NSInteger)buttonIndex;
     UILabel *_messageLabel;
     UITextView *_messageTextView;
     UIImageView *_messageTextViewMaskImageView;
-    UITextField *_inputTextField;
     NSMutableArray *_buttons;
     NSInteger _cancelButtonIndex;
     TSAlertViewButtonLayout _buttonLayout;
@@ -66,11 +65,15 @@ didDismissWithButtonIndex:(NSInteger)buttonIndex;
     CGFloat _maxHeight;
     BOOL _usesMessageTextView;
     TSAlertViewStyle _style;
+    // TSAlertView (TSCustomizableAlertView)
+    NSMutableArray *_textFields;
+    BOOL overrodeHeight;
+    CGFloat textFieldHeightoffset;
 }
 @property(nonatomic, copy) NSString *title;
 @property(nonatomic, copy) NSString *message;
 @property(nonatomic, assign) id<TSAlertViewDelegate> delegate;
-@property(nonatomic) NSInteger cancelButtonIndex;
+@property(nonatomic, assign) NSInteger cancelButtonIndex;
 @property(nonatomic, readonly) NSInteger firstOtherButtonIndex;
 @property(nonatomic, readonly) NSInteger numberOfButtons;
 @property(nonatomic, readonly, getter=isVisible) BOOL visible;
@@ -93,4 +96,28 @@ didDismissWithButtonIndex:(NSInteger)buttonIndex;
 - (void)dismissWithClickedButtonIndex:(NSInteger)buttonIndex
                              animated:(BOOL)animated;
 - (void)show;
+@end
+
+@interface TSAlertView (TSCustomizableAlertView)
+
+// Returns the number of text fields added to the current instance
+@property (nonatomic, readonly) NSInteger numberOfTextFields;
+// Returns the first text field, identical to the message textFieldForIndex:
+// with 0 as it argument, with the exception that firstTextField will return nil
+// if there aren't any text fields, whereas textFieldForIndex: will throw an
+// exception
+@property (nonatomic, readonly) UITextField *firstTextField;
+
+// Allows you to add a UITextField directly, without having TSAlertView to
+// create it for you
+- (void)addTextField:(UITextField *)textField;
+// Creates and adds a UITextField, setting the placeholder value to the label
+// parameter
+- (UITextField *)addTextFieldWithLabel:(NSString *)label;
+// Creates and adds a UITextField, setting the placeholder value to the label
+// parameter, and the text value to the value parameter
+- (UITextField *)addTextFieldWithLabel:(NSString *)label
+                                 value:(NSString *)value;
+// Returns the UITextField instance at the specified index. Note: this method
+- (UITextField *)textFieldAtIndex:(NSInteger)index;
 @end
