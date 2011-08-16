@@ -324,19 +324,26 @@ const CGFloat kTSAlertView_ColumnMargin = 10.;
 
 - (void)onKeyboardWillShow:(NSNotification *)note
 {
-    NSValue *v = [note.userInfo objectForKey:UIKeyboardFrameEndUserInfoKey];
-    CGRect kbframe = [v CGRectValue];
-    kbframe = [[self superview] convertRect:kbframe fromView:nil];
+    NSValue *boundsValue =
+            [[note userInfo] objectForKey:UIKeyboardBoundsUserInfoKey];
+    NSValue *centerValue =
+            [[note userInfo] objectForKey:UIKeyboardCenterEndUserInfoKey];
+    CGPoint kbCenter = [[self superview] convertPoint:[centerValue CGPointValue]
+            fromView:nil];
+    CGRect kbBounds = [boundsValue CGRectValue];
+    CGRect kbFrame = CGRectOffset(kbBounds,
+            kbCenter.x - kbBounds.size.width / 2.,
+            kbCenter.y - kbBounds.size.height / 2.);
     
-    if (CGRectIntersectsRect([self frame], kbframe)) {
+    if (CGRectIntersectsRect([self frame], kbFrame)) {
         CGPoint c = [self center];
         
-        if ([self frame].size.height > kbframe.origin.y - 20.) {
-            [self setMaxHeight:kbframe.origin.y - 20.];
+        if ([self frame].size.height > kbFrame.origin.y - 20.) {
+            [self setMaxHeight:kbFrame.origin.y - 20.];
             [self sizeToFit];
             [self layoutSubviews];
         }
-        c.y = kbframe.origin.y / 2.;
+        c.y = kbFrame.origin.y / 2.;
         [UIView beginAnimations:nil context:NULL];
         [UIView setAnimationDuration:.2];
         [self setCenter:c];
