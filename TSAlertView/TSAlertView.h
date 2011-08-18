@@ -67,6 +67,7 @@ didDismissWithButtonIndex:(NSInteger)buttonIndex;
     TSAlertViewStyle _style;
     // TSAlertView (TSCustomizableAlertView)
     NSMutableArray *_textFields;
+    id _userInfo;
 }
 
 @property(nonatomic, copy) NSString *title;
@@ -84,6 +85,7 @@ didDismissWithButtonIndex:(NSInteger)buttonIndex;
 @property(nonatomic, retain) UIImage *backgroundImage;
 @property(nonatomic, assign) TSAlertViewStyle style;
 @property(nonatomic, readonly) UITextField *inputTextField;
+@property(nonatomic, retain) id userInfo;
 
 - (id)initWithTitle:(NSString *)title
             message:(NSString *)message

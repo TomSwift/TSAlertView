@@ -189,16 +189,6 @@ const CGFloat kTSAlertView_ColumnMargin = 10.;
 
 @implementation TSAlertView
 
-@synthesize delegate = _delegate;
-@synthesize backgroundImage = _backgroundImage;
-@synthesize cancelButtonIndex = _cancelButtonIndex;
-@synthesize buttonLayout = _buttonLayout;
-@synthesize firstOtherButtonIndex = _firstOtherButtonIndex;
-@synthesize width = _width;
-@synthesize maxHeight = _maxHeight;
-@synthesize usesMessageTextView = _usesMessageTextView;
-@synthesize style = _style;
-
 #pragma mark -
 #pragma mark NSObject
 
@@ -620,6 +610,17 @@ const CGFloat kTSAlertView_ColumnMargin = 10.;
 }
 
 #pragma mark TSAlertView (Public)
+
+@synthesize delegate = _delegate;
+@synthesize backgroundImage = _backgroundImage;
+@synthesize cancelButtonIndex = _cancelButtonIndex;
+@synthesize buttonLayout = _buttonLayout;
+@synthesize firstOtherButtonIndex = _firstOtherButtonIndex;
+@synthesize width = _width;
+@synthesize maxHeight = _maxHeight;
+@synthesize usesMessageTextView = _usesMessageTextView;
+@synthesize style = _style;
+@synthesize userInfo = _userInfo;
 
 - (id)initWithTitle:(NSString *)title
             message:(NSString *)message
