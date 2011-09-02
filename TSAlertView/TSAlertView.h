@@ -63,6 +63,7 @@ didDismissWithButtonIndex:(NSInteger)buttonIndex;
     NSInteger _firstOtherButtonIndex;
     CGFloat _width;
     CGFloat _maxHeight;
+    NSUInteger _shouldNotAdmitBlanks;
     BOOL _usesMessageTextView;
     TSAlertViewStyle _style;
     // TSAlertView (TSCustomizableAlertView)
@@ -70,22 +71,28 @@ didDismissWithButtonIndex:(NSInteger)buttonIndex;
     id _userInfo;
 }
 
-@property(nonatomic, copy) NSString *title;
-@property(nonatomic, copy) NSString *message;
-@property(nonatomic, assign) id<TSAlertViewDelegate> delegate;
-@property(nonatomic, assign) NSInteger cancelButtonIndex;
-@property(nonatomic, readonly) NSInteger firstOtherButtonIndex;
-@property(nonatomic, readonly) NSInteger numberOfButtons;
-@property(nonatomic, readonly, getter=isVisible) BOOL visible;
+@property (nonatomic, copy) NSString *title;
+@property (nonatomic, copy) NSString *message;
+@property (nonatomic, assign) id<TSAlertViewDelegate> delegate;
+@property (nonatomic, assign) NSInteger cancelButtonIndex;
+@property (nonatomic, readonly) NSInteger firstOtherButtonIndex;
+@property (nonatomic, readonly) NSInteger numberOfButtons;
+@property (nonatomic, readonly, getter=isVisible) BOOL visible;
+// shouldNotAdmitBlanks are flags, for each UITextField, from lest significant
+// (i.e. [_textFields objectAtIndex:0]) to most significant bit
+// (i.e. [_textFIelds objectAtIndex:n - 1]).
+// By default shouldNotAdmitBlanks has its flags set for each initialzed
+// UITextField
+@property (nonatomic, assign) NSUInteger shouldNotAdmitBlanks; 
+@property (nonatomic, assign) BOOL usesMessageTextView;
 
-@property(nonatomic, assign) TSAlertViewButtonLayout buttonLayout;
-@property(nonatomic, assign) CGFloat width;
-@property(nonatomic, assign) CGFloat maxHeight;
-@property(nonatomic, assign) BOOL usesMessageTextView;
-@property(nonatomic, retain) UIImage *backgroundImage;
-@property(nonatomic, assign) TSAlertViewStyle style;
-@property(nonatomic, readonly) UITextField *inputTextField;
-@property(nonatomic, retain) id userInfo;
+@property (nonatomic, assign) TSAlertViewButtonLayout buttonLayout;
+@property (nonatomic, assign) CGFloat width;
+@property (nonatomic, assign) CGFloat maxHeight;
+@property (nonatomic, retain) UIImage *backgroundImage;
+@property (nonatomic, assign) TSAlertViewStyle style;
+@property (nonatomic, readonly) UITextField *inputTextField;
+@property (nonatomic, retain) id userInfo;
 
 - (id)initWithTitle:(NSString *)title
             message:(NSString *)message

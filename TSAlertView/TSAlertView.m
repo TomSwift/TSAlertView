@@ -15,6 +15,26 @@ const CGFloat kTSAlertView_BottomMargin = 15.;
 const CGFloat kTSAlertView_RowMargin = 5.;
 const CGFloat kTSAlertView_ColumnMargin = 10.;
 
+@interface NSString (TSString)
+
+- (BOOL)isBlank;
+@end
+
+@implementation NSString (TSString)
+
+- (BOOL)isBlank
+{
+    static NSCharacterSet *whitespaceCharSet = nil;
+
+    if (whitespaceCharSet == nil)
+        whitespaceCharSet =
+                [[NSCharacterSet whitespaceAndNewlineCharacterSet] retain];
+
+    return [@"" isEqualToString:[self stringByTrimmingCharactersInSet:
+            whitespaceCharSet]];
+}
+@end
+
 @interface TSAlertOverlayWindow : UIWindow
 {
     UIWindow *_oldKeyWindow;
@@ -475,7 +495,6 @@ const CGFloat kTSAlertView_ColumnMargin = 10.;
         //$$what if it's still too tall?
         messageViewSize.height = [self maxHeight] - totalHeight;
         totalHeight = [self maxHeight];
-        [self setUsesMessageTextView:YES];
     }
     if (layout) {
         // title
@@ -616,9 +635,10 @@ const CGFloat kTSAlertView_ColumnMargin = 10.;
 @synthesize cancelButtonIndex = _cancelButtonIndex;
 @synthesize buttonLayout = _buttonLayout;
 @synthesize firstOtherButtonIndex = _firstOtherButtonIndex;
+@synthesize shouldNotAdmitBlanks = _shouldNotAdmitBlanks;
+@synthesize usesMessageTextView = _usesMessageTextView;
 @synthesize width = _width;
 @synthesize maxHeight = _maxHeight;
-@synthesize usesMessageTextView = _usesMessageTextView;
 @synthesize style = _style;
 @synthesize userInfo = _userInfo;
 
@@ -633,6 +653,7 @@ const CGFloat kTSAlertView_ColumnMargin = 10.;
         [self setTitle:title];
         [self setMessage:message];
         [self setDelegate:delegate];
+        [self setUsesMessageTextView:YES];
         if (nil != cancelButtonTitle) {
             [self addButtonWithTitle:cancelButtonTitle];
             [self setCancelButtonIndex:.0];
@@ -708,9 +729,8 @@ const CGFloat kTSAlertView_ColumnMargin = 10.;
     if (_textFields == nil) {
         UITextField *inputTextField = [[[UITextField alloc] init] autorelease];
 
-        [self setTextFieldProperties:&inputTextField];
-        _textFields =
-                [[NSMutableArray alloc] initWithObjects:inputTextField, nil];
+        _textFields = [[NSMutableArray alloc] init];
+        [self addTextField:inputTextField];
     }
     return [_textFields objectAtIndex:0];
 }
@@ -823,28 +843,48 @@ const CGFloat kTSAlertView_ColumnMargin = 10.;
 - (void)dismissWithClickedButtonIndex:(NSInteger)buttonIndex
                              animated:(BOOL)animated
 {
-    if ([self style] == TSAlertViewStyleInput &&
-            [[self inputTextField] isFirstResponder])
-        [[self inputTextField] resignFirstResponder];
-    if ([[self delegate] respondsToSelector:
-            @selector(alertView:willDismissWithButtonIndex:)])
-        [[self delegate] alertView:self willDismissWithButtonIndex:buttonIndex];
-    if (animated) {
-        [[self window] setBackgroundColor:[UIColor clearColor]];
-        [[self window] setAlpha:1.];
-        [UIView beginAnimations:nil context:NULL];
-        [UIView setAnimationDuration:.2];
-        [[self window] resignKeyWindow];
-        [[self window] setAlpha:.0];
-        [self releaseWindow:buttonIndex];
-        [UIView commitAnimations];
-    } else {
-        [[self window] resignKeyWindow];
-        [self releaseWindow:buttonIndex];
+    BOOL shouldContinue = YES;
+    NSUInteger shouldNotAdmitBlanks = [self shouldNotAdmitBlanks];
+
+    if ([self style] == TSAlertViewStyleInput && shouldNotAdmitBlanks) {
+        NSArray *textFields = [self textFields];
+        NSUInteger i, count = [textFields count], mask = (NSUInteger)-1;
+
+        for (i = 0; i < count; i++) {
+            if (!(mask & shouldNotAdmitBlanks >> i))
+                continue;
+
+            UITextField *textField = [textFields objectAtIndex:i];
+            NSString *text = [textField text];
+
+            if (text == nil || [text isBlank]) {
+                shouldContinue = NO;
+                break;
+            }
+        }
     }
-    // Force keyboard dismissal
-    [[self textFields] makeObjectsPerformSelector:
-            @selector(resignFirstResponder)];
+    if (shouldContinue) {
+        if ([[self delegate] respondsToSelector:
+                @selector(alertView:willDismissWithButtonIndex:)])
+            [[self delegate] alertView:self
+                    willDismissWithButtonIndex:buttonIndex];
+        if (animated) {
+            [[self window] setBackgroundColor:[UIColor clearColor]];
+            [[self window] setAlpha:1.];
+            [UIView beginAnimations:nil context:NULL];
+            [UIView setAnimationDuration:.2];
+            [[self window] resignKeyWindow];
+            [[self window] setAlpha:.0];
+            [self releaseWindow:buttonIndex];
+            [UIView commitAnimations];
+        } else {
+            [[self window] resignKeyWindow];
+            [self releaseWindow:buttonIndex];
+        }
+        // Force keyboard dismissal
+        [[self textFields] makeObjectsPerformSelector:
+                @selector(resignFirstResponder)];
+    }
 }
 
 - (void)show
@@ -909,9 +949,14 @@ const CGFloat kTSAlertView_ColumnMargin = 10.;
 
 - (void)addTextField:(UITextField *)textField
 {
-    //[textField setBackgroundColor:[UIColor clearColor]];
+    NSMutableArray *textFields = [self textFields];
+
     [self setTextFieldProperties:&textField];
-    [[self textFields] addObject:textField];
+    // Set shouldNotAdmitBlanks correspondent flag for this UITextField
+    [self setShouldNotAdmitBlanks:
+            [self shouldNotAdmitBlanks] + (1 << [textFields count])];
+    [textFields addObject:textField];
+    
 }
 
 - (UITextField *)addTextFieldWithLabel:(NSString *)label
