@@ -846,7 +846,8 @@ const CGFloat kTSAlertView_ColumnMargin = 10.;
     BOOL shouldContinue = YES;
     NSUInteger shouldNotAdmitBlanks = [self shouldNotAdmitBlanks];
 
-    if ([self style] == TSAlertViewStyleInput && shouldNotAdmitBlanks) {
+    if (buttonIndex != [self cancelButtonIndex] &&
+            [self style] == TSAlertViewStyleInput && shouldNotAdmitBlanks) {
         NSArray *textFields = [self textFields];
         NSUInteger i, count = [textFields count], mask = (NSUInteger)-1;
 
