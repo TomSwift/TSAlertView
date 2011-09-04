@@ -653,7 +653,7 @@ const CGFloat kTSAlertView_ColumnMargin = 10.;
         [self setTitle:title];
         [self setMessage:message];
         [self setDelegate:delegate];
-        [self setUsesMessageTextView:YES];
+        [self setUsesMessageTextView:NO];
         if (nil != cancelButtonTitle) {
             [self addButtonWithTitle:cancelButtonTitle];
             [self setCancelButtonIndex:.0];
