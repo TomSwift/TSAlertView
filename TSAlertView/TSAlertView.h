@@ -7,18 +7,18 @@
 
 #import <UIKit/UIKit.h>
 
-typedef enum 
+typedef enum
 {
 	TSAlertViewButtonLayoutNormal,
 	TSAlertViewButtonLayoutStacked
-	
+
 } TSAlertViewButtonLayout;
 
 typedef enum
 {
 	TSAlertViewStyleNormal,
 	TSAlertViewStyleInput,
-	
+
 } TSAlertViewStyle;
 
 @class TSAlertViewController;
