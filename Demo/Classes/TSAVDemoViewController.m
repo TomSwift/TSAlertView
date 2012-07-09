@@ -40,26 +40,26 @@
 {
 }
 
-- (void) onShow:(id)sender	
+- (void) onShow:(id)sender
 {
 	[_messageTextView resignFirstResponder];
 	[_titleTextField resignFirstResponder];
 	[_widthTextField resignFirstResponder];
 	[_maxHeightTextField resignFirstResponder];
-	
+
 	TSAlertView* av = [[[TSAlertView alloc] init] autorelease];
 	av.title = _titleTextField.text;
 	av.message = _messageTextView.text;
-	
+
 	for ( int i = 0 ; i < [_buttonCountTextField.text intValue] ; i++ )
 	{
 		[av addButtonWithTitle: [NSString stringWithFormat: @"Button %d", i]];
 	}
-	
+
 	av.style = _hasInputFieldSwitch.on ? TSAlertViewStyleInput : TSAlertViewStyleNormal;
 	av.buttonLayout = _stackedSwitch.on ? TSAlertViewButtonLayoutStacked : TSAlertViewButtonLayoutNormal;
 	av.usesMessageTextView = _usesTextViewSwitch.on;
-	
+
 	av.width = [_widthTextField.text floatValue];
 	av.maxHeight = [_maxHeightTextField.text floatValue];
 
@@ -75,7 +75,7 @@
 - (void)didReceiveMemoryWarning {
     // Releases the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];
-    
+
     // Release any cached data, images, etc. that aren't in use.
 }
 
