@@ -60,6 +60,8 @@ typedef enum
 @property(nonatomic, readonly) NSInteger numberOfButtons;
 @property(nonatomic, readonly, getter=isVisible) BOOL visible;
 
+@property(nonatomic, assign) UIView *customSubview;
+
 @property(nonatomic, assign) TSAlertViewButtonLayout buttonLayout;
 @property(nonatomic, assign) CGFloat width;
 @property(nonatomic, assign) CGFloat maxHeight;

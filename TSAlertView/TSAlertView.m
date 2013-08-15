@@ -333,6 +333,15 @@ const CGFloat kTSAlertView_ColumnMargin = 10.0;
 	return _buttons;
 }
 
+
+-(void)setCustomSubview:(UIView *)customSubview
+{
+    _customSubview = customSubview;
+    
+    [ self addSubview:customSubview ];
+}
+
+
 - (UILabel*) titleLabel
 {
 	if ( _titleLabel == nil )
@@ -344,6 +353,8 @@ const CGFloat kTSAlertView_ColumnMargin = 10.0;
 		_titleLabel.textAlignment = UITextAlignmentCenter;
 		_titleLabel.lineBreakMode = UILineBreakModeWordWrap;
 		_titleLabel.numberOfLines = 0;
+        
+        [self addSubview: _titleLabel];
 	}
 	
 	return _titleLabel;
@@ -360,6 +371,8 @@ const CGFloat kTSAlertView_ColumnMargin = 10.0;
 		_messageLabel.textAlignment = UITextAlignmentCenter;
 		_messageLabel.lineBreakMode = UILineBreakModeWordWrap;
 		_messageLabel.numberOfLines = 0;
+        
+        [self addSubview: _messageLabel];
 	}
 	
 	return _messageLabel;
@@ -378,6 +391,8 @@ const CGFloat kTSAlertView_ColumnMargin = 10.0;
 		_messageTextView.bounces = YES;
 		_messageTextView.alwaysBounceVertical = YES;
 		_messageTextView.layer.cornerRadius = 5;
+        
+        [self addSubview: _messageTextView];
 	}
 	
 	return _messageTextView;
@@ -393,6 +408,8 @@ const CGFloat kTSAlertView_ColumnMargin = 10.0;
 		_messageTextViewMaskImageView.userInteractionEnabled = NO;
 		_messageTextViewMaskImageView.layer.masksToBounds = YES;
 		_messageTextViewMaskImageView.layer.cornerRadius = 6;
+        
+        [self addSubview: _messageTextViewMaskImageView];
 	}
 	return _messageTextViewMaskImageView;
 }
@@ -403,6 +420,8 @@ const CGFloat kTSAlertView_ColumnMargin = 10.0;
 	{
 		_inputTextField = [[UITextField alloc] init];
 		_inputTextField.borderStyle = UITextBorderStyleRoundedRect;
+        
+        [self addSubview: _inputTextField];
 	}
 	
 	return _inputTextField;
@@ -485,6 +504,8 @@ const CGFloat kTSAlertView_ColumnMargin = 10.0;
 	
 	[self.buttons addObject: b];
 	
+    [self addSubview: b];
+    
 	[self setNeedsLayout];
 	
 	return self.buttons.count-1;
@@ -554,6 +575,9 @@ const CGFloat kTSAlertView_ColumnMargin = 10.0;
 {
 	[[NSRunLoop currentRunLoop] runMode: NSDefaultRunLoopMode beforeDate:[NSDate date]];
 	
+    
+    
+    
 	TSAlertViewController* avc = [[[TSAlertViewController alloc] init] autorelease];
 	avc.view.backgroundColor = [UIColor clearColor];
 	
@@ -575,6 +599,12 @@ const CGFloat kTSAlertView_ColumnMargin = 10.0;
 	[self sizeToFit];
 	self.center = CGPointMake( CGRectGetMidX( avc.view.bounds ), CGRectGetMidY( avc.view.bounds ) );;
 	self.frame = CGRectIntegral( self.frame );
+    
+    if ( [self.delegate respondsToSelector: @selector(willPresentAlertView:)] )
+    {
+        [self.delegate willPresentAlertView: self ];
+    }
+    
 	[self pulse];
 	
 	if ( self.style == TSAlertViewStyleInput )
@@ -601,6 +631,11 @@ const CGFloat kTSAlertView_ColumnMargin = 10.0;
 											  [UIView animateWithDuration:1.0/7.5
 															   animations: ^{
 																   self.transform = CGAffineTransformIdentity;
+                                                                   
+                                                                   if ( [self.delegate respondsToSelector: @selector(didPresentAlertView:)] )
+                                                                   {
+                                                                       [self.delegate didPresentAlertView: self ];
+                                                                   }
 															   }];
 										  }];
 					 }];
@@ -637,10 +672,11 @@ const CGFloat kTSAlertView_ColumnMargin = 10.0;
 	CGSize  messageViewSize = [self messageLabelSize];
 	CGSize  inputTextFieldSize = [self inputTextFieldSize];
 	CGSize  buttonsAreaSize = stacked ? [self buttonsAreaSize_Stacked] : [self buttonsAreaSize_SideBySide];
-	
+	CGSize  customSubviewSize = ( self.customSubview ) ? self.customSubview.bounds.size : CGSizeZero;
+    
 	CGFloat inputRowHeight = self.style == TSAlertViewStyleInput ? inputTextFieldSize.height + kTSAlertView_RowMargin : 0;
 	
-	CGFloat totalHeight = kTSAlertView_TopMargin + titleLabelSize.height + kTSAlertView_RowMargin + messageViewSize.height + inputRowHeight + kTSAlertView_RowMargin + buttonsAreaSize.height + kTSAlertView_BottomMargin;
+	CGFloat totalHeight = kTSAlertView_TopMargin + titleLabelSize.height + kTSAlertView_RowMargin + messageViewSize.height + customSubviewSize.height + kTSAlertView_RowMargin + inputRowHeight + kTSAlertView_RowMargin + buttonsAreaSize.height + kTSAlertView_BottomMargin;
 	
 	if ( totalHeight > self.maxHeight )
 	{
@@ -662,7 +698,6 @@ const CGFloat kTSAlertView_ColumnMargin = 10.0;
 		if ( self.title != nil )
 		{
 			self.titleLabel.frame = CGRectMake( kTSAlertView_LeftMargin, y, titleLabelSize.width, titleLabelSize.height );
-			[self addSubview: self.titleLabel];
 			y += titleLabelSize.height + kTSAlertView_RowMargin;
 		}
 		
@@ -672,17 +707,14 @@ const CGFloat kTSAlertView_ColumnMargin = 10.0;
 			if ( self.usesMessageTextView )
 			{
 				self.messageTextView.frame = CGRectMake( kTSAlertView_LeftMargin, y, messageViewSize.width, messageViewSize.height );
-				[self addSubview: self.messageTextView];
 				y += messageViewSize.height + kTSAlertView_RowMargin;
 				
 				UIImageView* maskImageView = [self messageTextViewMaskView];
 				maskImageView.frame = self.messageTextView.frame;
-				[self addSubview: maskImageView];
 			}
 			else
 			{
 				self.messageLabel.frame = CGRectMake( kTSAlertView_LeftMargin, y, messageViewSize.width, messageViewSize.height );
-				[self addSubview: self.messageLabel];
 				y += messageViewSize.height + kTSAlertView_RowMargin;
 			}
 		}
@@ -691,10 +723,16 @@ const CGFloat kTSAlertView_ColumnMargin = 10.0;
 		if ( self.style == TSAlertViewStyleInput )
 		{
 			self.inputTextField.frame = CGRectMake( kTSAlertView_LeftMargin, y, inputTextFieldSize.width, inputTextFieldSize.height );
-			[self addSubview: self.inputTextField];
 			y += inputTextFieldSize.height + kTSAlertView_RowMargin;
 		}
 		
+        if( self.customSubview )
+        {
+            self.customSubview.frame = CGRectMake( kTSAlertView_LeftMargin, y, customSubviewSize.width, customSubviewSize.height );
+            y += customSubviewSize.height + kTSAlertView_RowMargin;
+        }
+        
+        
 		// buttons
 		CGFloat buttonHeight = [[self.buttons objectAtIndex:0] sizeThatFits: CGSizeZero].height;
 		if ( stacked )
@@ -703,7 +741,6 @@ const CGFloat kTSAlertView_ColumnMargin = 10.0;
 			for ( UIButton* b in self.buttons )
 			{
 				b.frame = CGRectMake( kTSAlertView_LeftMargin, y, buttonWidth, buttonHeight );
-				[self addSubview: b];
 				y += buttonHeight + kTSAlertView_RowMargin;
 			}
 		}
@@ -714,11 +751,9 @@ const CGFloat kTSAlertView_ColumnMargin = 10.0;
 			for ( UIButton* b in self.buttons )
 			{
 				b.frame = CGRectMake( x, y, buttonWidth, buttonHeight );
-				[self addSubview: b];
 				x += buttonWidth + kTSAlertView_ColumnMargin;
 			}
 		}
-		
 	}
 	
 	return CGSizeMake( self.width, totalHeight );
